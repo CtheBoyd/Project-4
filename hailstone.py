@@ -6,7 +6,7 @@ def hailstone(integer):
     for index in range(integer, 0, -1):
 
         if integer % 2 == 0: #even case
-            value = interger / 2
+            value = integer / 2
             integer = value
 
         if integer % 2 == 1: #odd case
@@ -14,4 +14,4 @@ def hailstone(integer):
             integer = value
 
     return value
-print(hailstone(3))
+print(hailstone(1001))
