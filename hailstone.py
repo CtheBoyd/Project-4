@@ -1,17 +1,17 @@
 def hailstone(integer):
+    if integer == 1:
+        return 0
+    else:
+        count = 0
 
-
-
-
-    for index in range(integer, 0, -1):
+    if integer > 1:
 
         if integer % 2 == 0: #even case
-            value = integer / 2
-            integer = value
+            count += (integer / 2)
 
-        if integer % 2 == 1: #odd case
-            value = integer * 3 + 1
-            integer = value
+        else: #odd case
+            count += ((integer * 2) + 1)
 
-    return value
-print(hailstone(1001))
+
+    return count
+print(int(hailstone(3)))
